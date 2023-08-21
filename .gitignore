@@ -3,6 +3,7 @@
 /node_modules
 
 env.ts
+.env
 # Logs
 logs
 *.log

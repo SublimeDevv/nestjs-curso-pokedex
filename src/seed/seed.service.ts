@@ -8,7 +8,8 @@ import { AxiosAdapter } from 'src/common/adapters/axios.adapter';
 @Injectable()
 export class SeedService {
   constructor(
-    @InjectModel(Pokemon.name) private readonly pokemonModel: Model<Pokemon>, private readonly Http: AxiosAdapter
+    @InjectModel(Pokemon.name) private readonly pokemonModel: Model<Pokemon>,
+    private readonly Http: AxiosAdapter,
   ) {}
 
   async executeSeed() {

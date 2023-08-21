@@ -9,7 +9,8 @@ import {
   HttpCode,
   HttpStatus,
   Query,
-} from '@nestjs/common';
+}   from '@nestjs/common';
+
 import { PokemonService } from './pokemon.service';
 import { CreatePokemonDto } from './dto/create-pokemon.dto';
 import { UpdatePokemonDto } from './dto/update-pokemon.dto';
@@ -18,9 +19,8 @@ import { PaginationDto } from '../common/dto/pagination.dto';
 
 @Controller('pokemon')
 export class PokemonController {
-  constructor(private readonly pokemonService: PokemonService)
-{}
- 
+  constructor(private readonly pokemonService: PokemonService) {}
+
   @HttpCode(HttpStatus.CREATED)
   @Post()
   create(@Body() createPokemonDto: CreatePokemonDto) {
